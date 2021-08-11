@@ -5,7 +5,7 @@ n,m=map(int,input().split())
 parent=[0]*(n+1)
 
 # 각 노드의 부모를 자기 자신으로 만들기
-for i in range(n+1):
+for i in range(1,n+1):
     parent[i]=i
     
 # union 연산 각각 수행

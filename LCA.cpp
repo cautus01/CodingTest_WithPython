@@ -46,7 +46,8 @@ int main() { // 여러 개의 테스트케이스를 돌릴 때는 초기화에 �
 	// 점핑 테이블 (희소 테이블) 을 만들기
 	for (int r = 1;r < 18;r++) {
 		for (int i = 1;i <= N;i++) {
-			Parent[r][i] = Parent[r - 1][Parent[r - 1][i]]; // Parent[r][i]는 Parent[r-1][i]의 2^(r-1) 번째 부모
+			// Parent[r][i]는 Parent[r-1][i]의 2^(r-1) 번째 부모
+			Parent[r][i] = Parent[r - 1][Parent[r - 1][i]];
 		}
 	}
 
